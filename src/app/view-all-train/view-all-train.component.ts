@@ -9,8 +9,10 @@ export class ViewAllTrainComponent implements OnInit {
 
   constructor() { }
   name="Abhinand"
+  status:boolean=false
   readButton=()=>{
     this.name="raju"
+    this.status=true
   }
   ngOnInit(): void {
   }

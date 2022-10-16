@@ -1,3 +1,27 @@
-<p>{{name}}</p>
-<input type="text" class="form-control" value="{{name}}" name="name" [(ngModel)]="name">
-<button class="form-control" (click)="readButton()"> click to change</button>
+<app-navbar></app-navbar>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">SerialNo</th>
+                    <th scope="col">StationCode</th>
+                    <th scope="col">ArrivalTime</th>
+                    <th scope="col">DepartureTime</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of railData.Route">
+                    <td>{{i.SerialNo}}</td>
+                    <td>{{i.StationCode}}</td>
+                    <td>{{i.ArrivalTime}}</td>
+                    <td>{{i.DepartureTime}}</td>
+                    <td>{{i.Distance}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
